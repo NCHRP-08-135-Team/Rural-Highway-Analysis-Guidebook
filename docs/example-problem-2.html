@@ -24,7 +24,7 @@
 <meta name="author" content="Washburn, Al-kaisy, Moreno, Schroeder, Barrios" />
 
 
-<meta name="date" content="2021-12-01" />
+<meta name="date" content="2022-07-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="example-problem-1.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="segmentation-example.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -109,6 +109,10 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="4.1" data-path="example-problem-2.html"><a href="example-problem-2.html#passing-constrained-segment-with-horizontal-curves"><i class="fa fa-check"></i><b>4.1</b> Passing Constrained Segment with Horizontal Curves</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="segmentation-example.html"><a href="segmentation-example.html"><i class="fa fa-check"></i><b>5</b> Segmentation Example</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="segmentation-example.html"><a href="segmentation-example.html#oregon-us-20"><i class="fa fa-check"></i><b>5.1</b> Oregon US-20</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -139,7 +143,7 @@ div.csl-indent {
 <p>The segment to be evaluated has the same general demand and geometric characteristics as the segment evaluated in Example Problem 1. The difference is that this segment has horizontal curvature instead of being straight; otherwise, the same inputs are used as for Example Problem 1.</p>
 <p>The segment is split into 11 subsegments, with each subsegment being either straight (tangent) or curved. Horizontal curvature data for each subsegment is provided in Exhibit 1.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Example2Image1"></span>
-<img src="Images/Example2Exhibit1.JPG" alt="Example 2 Highway Segment"  />
+<img src="Images/Example2Exhibit1.jpg" alt="Example 2 Highway Segment"  />
 <p class="caption">
 Figure 4.1: Example 2 Highway Segment
 </p>
@@ -318,6 +322,13 @@ to shed water from the paved way) will cause the superelevation to vary by direc
 <p><span class="math display">\[S_{{HC}2} = \text{min}(53.7,\ 44.0730) = 44.1\ \text{mi/h}\]</span></p>
 <p>Similar computations are performed for the other subsegments with horizontal curves. The results are presented in Exhibit 26-19.</p>
 <table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center"><strong>Subsegment</strong></th>
@@ -368,6 +379,12 @@ to shed water from the paved way) will cause the superelevation to vary by direc
 <p><strong>Step 5d.3: Calculate Adjusted Average Speed for the Segment</strong></p>
 <p>The speed results for all subsegments are summarized in Exhibit 26-20.</p>
 <table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center"><strong>Subsegment</strong></th>
@@ -455,8 +472,8 @@ to shed water from the paved way) will cause the superelevation to vary by direc
 <p><span class="math display">\[S = \frac{\sum_{i = 1}^{11}\left({SubsegSpeed}_{i} \times{SubsegLength}_{i} \right)}{L}\]</span></p>
 <p><span class="math display">\[S = \frac{\begin{bmatrix}
 (53.7 \times 280) + (44.1 \times 432) + (53.7 \times 260) + (37.6 \times 366.5) \\
- + (53.7 \times 250) + (30.9 \times 216) + (53.7 \times 275.6) + (50.5 \times 458) \\
- + (53.7 \times 285) + (53.7 \times 767.9) + (53.7 \times 369) \\
++ (53.7 \times 250) + (30.9 \times 216) + (53.7 \times 275.6) + (50.5 \times 458) \\
++ (53.7 \times 285) + (53.7 \times 767.9) + (53.7 \times 369) \\
 \end{bmatrix}}{3,960}\]</span></p>
 <p><span class="math display">\[S = 49.5\ \text{mi/h}\]</span></p>
 <p><strong>Discussion</strong></p>
@@ -470,7 +487,7 @@ to shed water from the paved way) will cause the superelevation to vary by direc
         </div>
       </div>
 <a href="example-problem-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="segmentation-example.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

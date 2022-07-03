@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Segmentation Example | NCHRP Project 08-135 Guidebook Example</title>
+  <meta name="description" content="This is a simple example of a book written with the Bookdown package. Output formats include Gitbook/HTML, ePub, and PDF." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Segmentation Example | NCHRP Project 08-135 Guidebook Example" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a simple example of a book written with the Bookdown package. Output formats include Gitbook/HTML, ePub, and PDF." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Segmentation Example | NCHRP Project 08-135 Guidebook Example" />
+  
+  <meta name="twitter:description" content="This is a simple example of a book written with the Bookdown package. Output formats include Gitbook/HTML, ePub, and PDF." />
+  
+
+<meta name="author" content="Washburn, Al-kaisy, Moreno, Schroeder, Barrios" />
+
+
+<meta name="date" content="2022-07-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="example-problem-2.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Short Bookdown Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#research-team"><i class="fa fa-check"></i><b>1.1</b> Research Team</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#panel-staff-members"><i class="fa fa-check"></i><b>1.2</b> Panel / Staff Members</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="example-problem-1.html"><a href="example-problem-1.html"><i class="fa fa-check"></i><b>3</b> Example Problem 1</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="example-problem-1.html"><a href="example-problem-1.html#level-straight-passing-constrained-segment"><i class="fa fa-check"></i><b>3.1</b> Level, Straight, Passing Constrained Segment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="example-problem-2.html"><a href="example-problem-2.html"><i class="fa fa-check"></i><b>4</b> Example Problem 2</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="example-problem-2.html"><a href="example-problem-2.html#passing-constrained-segment-with-horizontal-curves"><i class="fa fa-check"></i><b>4.1</b> Passing Constrained Segment with Horizontal Curves</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="segmentation-example.html"><a href="segmentation-example.html"><i class="fa fa-check"></i><b>5</b> Segmentation Example</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="segmentation-example.html"><a href="segmentation-example.html#oregon-us-20"><i class="fa fa-check"></i><b>5.1</b> Oregon US-20</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">NCHRP Project 08-135 Guidebook Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="segmentation-example" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Segmentation Example</h1>
+<div id="oregon-us-20" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Oregon US-20</h2>
+<p>This section will demonstrate the segmentation process used for the Oregon US-20 example route. The general route limits are shown in Figure <a href="segmentation-example.html#fig:US20RouteMap">5.1</a>. The route generally extends from the Jefferson County line to Cline Falls Hwy/OB Riley Rd in Tumalo (44.399010616037145, -121.68160872108665; 44.12954543870768, -121.32386641302361). It is about 25 miles in length.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:US20RouteMap"></span>
+<img src="Images/US-20.png" alt="Oregon US-20 Route Boundaries"  />
+<p class="caption">
+Figure 5.1: Oregon US-20 Route Boundaries
+</p>
+</div>
+<p>The first step in the segmenation process was to identify segments based on cross section and passing configuration (for two-lane highways). This is shown in Figure <a href="segmentation-example.html#fig:US20SegmentationFullRoute">5.2</a>, with the color coding set as follows.</p>
+<p>Based on directional markings; for this example, the southeast-bound (SE-bound) direction of travel:<br />
+- <strong>Blue:</strong> Multilane highway (not present in this route)<br />
+- <strong>Red:</strong> Two-lane highway; passing not permitted in opposing direction<br />
+- <strong>Yellow:</strong> Two-lane highway; can pass using the opposing lane<br />
+- <strong>Green:</strong> Two-lane highway with designated passing lane<br />
+- <strong>Cyan:</strong> Arterial</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:US20SegmentationFullRoute"></span>
+<img src="Images/ExSegUS20_Full.png" alt="Oregon US-20 Full Route, with segmentation shown for cross section and passing designation"  />
+<p class="caption">
+Figure 5.2: Oregon US-20 Full Route, with segmentation shown for cross section and passing designation
+</p>
+</div>
+<p>More zoomed images for the north, central, and south portions of the route are shown in Figures <a href="segmentation-example.html#fig:US20SegmentationRouteNorth">5.3</a>, <a href="segmentation-example.html#fig:US20SegmentationRouteNorth">5.3</a>, <a href="segmentation-example.html#fig:US20SegmentationRouteCentral">5.4</a>, and <a href="segmentation-example.html#fig:US20SegmentationRouteSouth">5.5</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:US20SegmentationRouteNorth"></span>
+<img src="Images/ExSegUS20_North.png" alt="Oregon US-20 Segmentation, North Portion of Route"  />
+<p class="caption">
+Figure 5.3: Oregon US-20 Segmentation, North Portion of Route
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:US20SegmentationRouteCentral"></span>
+<img src="Images/ExSegUS20_Central.png" alt="Oregon US-20 Segmentation, Central Portion of Route"  />
+<p class="caption">
+Figure 5.4: Oregon US-20 Segmentation, Central Portion of Route
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:US20SegmentationRouteSouth"></span>
+<img src="Images/ExSegUS20_South.png" alt="Oregon US-20 Segmentation, South Portion of Route"  />
+<p class="caption">
+Figure 5.5: Oregon US-20 Segmentation, South Portion of Route
+</p>
+</div>
+<p>Locations with horizontal curves along the route are readily seen, but are also explicitly shown in Figure <a href="segmentation-example.html#fig:US20SegmentationHorizCurves">5.6</a>.</p>
+<p>Only horizontal curve 4 meets the segmentation criterion of only explicitly considering horizontal curves with a classification of 3 or higher. This curve has a superelevation of 0, central angle of 31.3 degrees, radius of 716 ft, and a length of 391 ft, yielding a classification of 3.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:US20SegmentationHorizCurves"></span>
+<img src="Images/ExSegUS20_HorizCurves.png" alt="Oregon US-20 Segmentation, including Horizontal Curves"  />
+<p class="caption">
+Figure 5.6: Oregon US-20 Segmentation, including Horizontal Curves
+</p>
+</div>
+<p>The vertical alignment along this route is quite varying. Consequently, Figure <a href="segmentation-example.html#fig:US20SegmentationGrades">5.7</a> only shows the grades that meet the segmentation criterion of vertical class 2 or higher.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:US20SegmentationGrades"></span>
+<img src="Images/ExSegUS20_Grades.png" alt="Oregon US-20 Segmentation, including Significant Grades"  />
+<p class="caption">
+Figure 5.7: Oregon US-20 Segmentation, including Significant Grades
+</p>
+</div>
+<p>The segmentation legend is shown in Figure <a href="segmentation-example.html#fig:US20SegmentationLegend">5.8</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:US20SegmentationLegend"></span>
+<img src="Images/ExSegUS20_SegmentsLegend.png" alt="Oregon US-20 Segmentation Legend"  />
+<p class="caption">
+Figure 5.8: Oregon US-20 Segmentation Legend
+</p>
+</div>
+<p>Regarding the vertical alignment, the following decisions were made:<br />
+- Grades 1 and 2, in segment 3, were similar and thus combined into a single grade, which was of class 3.<br />
+- There is a grade that starts in the second half of the segment preceding the second passing lane segment (#27). This grade is not considered in segment 26. The grade levels off in the last fourth of the passing lane segment. The passing lane is not split based upon grade and instead grade #4 is applied to the full length of the passing lane.</p>
+<p>The final segmentation is shown in Table <a href="segmentation-example.html#tab:Segmentation">5.1</a>. The total length is 135,344 ft (25.633 mi).</p>
+<table>
+<caption><span id="tab:Segmentation">Table 5.1: </span> Final Segmentation</caption>
+<colgroup>
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Seg ID</strong></th>
+<th align="center"><strong>Hwy Seg Type</strong></th>
+<th align="center"><strong>Two-Lane Seg Type</strong></th>
+<th align="center"><strong># Dir Lanes</strong></th>
+<th align="center"><strong>Length (ft)</strong></th>
+<th align="center"><strong>Grade (%)</strong></th>
+<th align="center"><strong>Vert Align Class</strong></th>
+<th align="center"><strong># Horiz Curves</strong></th>
+<th align="center"><strong>Posted Speed (mi/h)</strong></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">1007</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingZone</td>
+<td align="center">1</td>
+<td align="center">8276</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">13045</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">2779</td>
+<td align="center">-5</td>
+<td align="center">3</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">18620</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingZone</td>
+<td align="center">1</td>
+<td align="center">5109</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">Arterial</td>
+<td align="center">—</td>
+<td align="center">1</td>
+<td align="center">2177</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">35</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">Roundabout</td>
+<td align="center">—</td>
+<td align="center">1</td>
+<td align="center">797</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">35</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">Arterial</td>
+<td align="center">—</td>
+<td align="center">1</td>
+<td align="center">1495</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">35</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">Arterial</td>
+<td align="center">—</td>
+<td align="center">1</td>
+<td align="center">3990</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">20</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">11</td>
+<td align="center">Arterial</td>
+<td align="center">—</td>
+<td align="center">1</td>
+<td align="center">1460</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">35</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">12</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">944</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">45</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">13</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingZone</td>
+<td align="center">1</td>
+<td align="center">1750</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">14</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">2984</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">15</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingZone</td>
+<td align="center">1</td>
+<td align="center">5235</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">16</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">4148</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">17</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingZone</td>
+<td align="center">1</td>
+<td align="center">4039</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">18</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">6695</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">19</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingZone</td>
+<td align="center">1</td>
+<td align="center">1542</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">20</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">674</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">21</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingZone</td>
+<td align="center">1</td>
+<td align="center">1991</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">22</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">1231</td>
+<td align="center">-3</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">23</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingLane</td>
+<td align="center">2</td>
+<td align="center">6116</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">24</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">3120</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">25</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingZone</td>
+<td align="center">1</td>
+<td align="center">7688</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">26</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">4540</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">27</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingLane</td>
+<td align="center">2</td>
+<td align="center">6783</td>
+<td align="center">2.5</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">28</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">7416</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">29</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingZone</td>
+<td align="center">1</td>
+<td align="center">2178</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">30</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">5468</td>
+<td align="center">-3.5</td>
+<td align="center">3</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">31</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">674</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">55</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">32</td>
+<td align="center">TwoLaneHwy</td>
+<td align="center">PassingConstrained</td>
+<td align="center">1</td>
+<td align="center">1373</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">45</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="example-problem-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-SegmentationExample.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Guidebook.pdf", "Guidebook.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

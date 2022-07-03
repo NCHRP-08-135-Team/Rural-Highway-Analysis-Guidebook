@@ -1,4 +1,13 @@
 fig:Example2Image1
+fig:US20RouteMap
+fig:US20SegmentationFullRoute
+fig:US20SegmentationRouteNorth
+fig:US20SegmentationRouteCentral
+fig:US20SegmentationRouteSouth
+fig:US20SegmentationHorizCurves
+fig:US20SegmentationGrades
+fig:US20SegmentationLegend
+tab:Segmentation
 preface
 research-team
 panel-staff-members
@@ -7,3 +16,5 @@ example-problem-1
 level-straight-passing-constrained-segment
 example-problem-2
 passing-constrained-segment-with-horizontal-curves
+segmentation-example
+oregon-us-20
